@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_question"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    tools:context="website.codeforfun.practiceQuestion.activity.QuestionActivity">
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:foreground="?attr/selectableItemBackground"
+        card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
+        card_view:cardElevation="@dimen/card_recycler_elevation">
+
+            <TextView
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Progress : 1/3"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/gray_deep"
+                android:textSize="17sp" />
+
+        <ProgressBar
+            android:id="@+id/pb"
+            style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_alignEnd="@+id/progress"
+            android:layout_gravity="bottom"
+            android:layout_centerVertical="true"/>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/main_card_margin_horizontal"
+        android:layout_marginRight="@dimen/main_card_margin_horizontal"
+        android:foreground="?attr/selectableItemBackground"
+        card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
+        card_view:cardElevation="@dimen/card_recycler_elevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginBottom="5dp"
+                android:lineSpacingExtra="5sp"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/q1"
+                android:text="Which one of the following is not a Directive Principle of State Policy?"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_ads"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="bottom"
+        card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
+        card_view:cardElevation="@dimen/card_recycler_elevation">
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
